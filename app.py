@@ -11,14 +11,14 @@ from controllers.controller import (PerformSearch,
 # Init app
 app = Flask(__name__)
 
-ENV = 'dev'
+ENV = 'prod'
 
 if ENV == 'dev':
     app.debug = True
     app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:password@localhost/scrapper'
 else:
     app.debug = False
-    app.config['SQLALCHEMY_DATABASE_URI'] = ''
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://pwdcwdvbeoleep:52f788cceed84b92903381949f0f16acd190089904d939981f897929003f959e@ec2-34-197-212-240.compute-1.amazonaws.com:5432/d6fh5a24mu20mb'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 
