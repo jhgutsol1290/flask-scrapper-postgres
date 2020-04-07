@@ -1,0 +1,27 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+pre-commit = "*"
+pylint = "*"
+autopep8 = "*"
+black = "==19.10b0"
+
+[packages]
+flask = "*"
+psycopg2-binary = "*"
+flask-sqlalchemy = "*"
+gunicorn = "*"
+flask-marshmallow = "*"
+marshmallow-sqlalchemy = "*"
+nltk = "*"
+spacy = "*"
+pandas = "*"
+sklearn = "*"
+numpy = "*"
+beautifulsoup4 = "*"
+
+[requires]
+python_version = "3.7"
