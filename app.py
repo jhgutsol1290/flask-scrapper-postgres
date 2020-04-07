@@ -15,7 +15,7 @@ ENV = 'dev'
 
 if ENV == 'dev':
     app.debug = True
-    app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('POSTGRES_URI')
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:password@localhost/scrapper'
 else:
     app.debug = False
     app.config['SQLALCHEMY_DATABASE_URI'] = ''
