@@ -4,7 +4,7 @@
 
 Flow Chart of the project:
 
-![alt text](https://github.com/jhgutsol1290/flask-scrapper-postgres/flow_chart.jpg)
+![Screenshot](flow_chart.jpg)
 
 Example of the input:
 
