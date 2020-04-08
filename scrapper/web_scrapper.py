@@ -21,7 +21,6 @@ class WebScrapper:
                 for i in range(len(titles)):
                     self.final_array.append({
                         "content": descriptions[i].text,
-                        "title":    titles[i].text,
                         "reference": "https://" + anchors[i].get('href')[2:]
                     })
                 return self.final_array
@@ -37,7 +36,6 @@ class WebScrapper:
                 for i in range(len(titles)):
                     self.final_array.append({
                         "content": descriptions[i].text.replace('\n', ''),
-                        "title":    titles[i].text.replace('\n', ''),
                         "reference": "https://www.milenio.com" + anchors[i].get('href')
                     })
                 return self.final_array
@@ -53,7 +51,6 @@ class WebScrapper:
                 for i in range(len(titles)):
                     self.final_array.append({
                         "content": descriptions[i].text.replace('\n', '').strip(),
-                        "title":    titles[i].text.replace('\n', '').strip(),
                         "reference": anchors[i].get('href')
                     })
                 return self.final_array

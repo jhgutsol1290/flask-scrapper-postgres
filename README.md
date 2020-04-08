@@ -38,7 +38,7 @@ Example of response:
 
 The response is composed by three objects and each contains relevant data from the sources.
 
-- **Title** -> Title of the news found. (Only when scrapper works, when data is retrieved from DB it dissapears)
+
 - **Content** -> Description of the news found.
 - **Reference** -> Link to the reference.
 - **Rating** -> How much text from content is similar to input.
