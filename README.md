@@ -2,6 +2,10 @@
 
 *ScrappyDoo2020* is a project that retrieves data from 3 different sources (Excelsior, Milenio and 20minutos) through a *web-scrapper* based on *BeautifulSoup4* according to an input that the user provides in a particular way and then is stored in a *PostgreSQL* database. When the input is repetead the data is retrieved from database. It also makes use of *TFIDF* in order to get the excpeted results through *cosine_similarity*.
 
+Flow Chart of the project:
+
+![alt text](https://github.com/jhgutsol1290/flask-scrapper-postgres/flow_chart.jpg)
+
 Example of the input:
 
 ```python
