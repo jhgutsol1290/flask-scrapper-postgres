@@ -95,11 +95,12 @@ def api_news():
         if existing_input is not None:
             scrappers = Scrapper.query.filter_by(input_id=existing_input.id).all()
             data = scrappers_schema.dump(scrappers)
+            resp = jsonify({"mensaje": "Registros recuperados de DB correctamente", "news": data})            
         else:
             search = PerformSearch()
             data = search.perform_search(keywords)
             save_data(data, keywords)
-        resp = jsonify(data)
+            resp = jsonify({"mensaje": "Registros recuperados correctamente", "news": data})
         resp.status_code = 200
         return resp
     except Exception as e:
