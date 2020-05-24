@@ -92,7 +92,7 @@ def api_news():
     validator = Validator()
     validated_request = validator.validate_request(keywords)
     if not validated_request:
-        message = {"mensaje": "Parámetros Incorrectos. Intente de nuevo"}
+        message = {"message": "Incorrect params. Please, try again"}
         resp = jsonify(message)
         resp.status_code = 500
         return resp
@@ -101,16 +101,16 @@ def api_news():
         if existing_input is not None:
             scrappers = Scrapper.query.filter_by(input_id=existing_input.id).all()
             data = scrappers_schema.dump(scrappers)
-            resp = jsonify({"mensaje": "Registros recuperados de DB correctamente", "news": data})            
+            resp = jsonify({"message": "Records retrieved from DB successfully", "news": data})            
         else:
             search = PerformSearch()
             data = search.perform_search(keywords)
             save_data(data, keywords)
-            resp = jsonify({"mensaje": "Registros recuperados correctamente", "news": data})
+            resp = jsonify({"message": "Records retrieved successfully", "news": data})
         resp.status_code = 200
         return resp
     except Exception as e:
-        message = {"mensaje": f"Parámetros Incorrectos. Intente de nuevo. Error: {e}"}
+        message = {"message": f"Incorrect params. Please, try again. Error: {e}"}
         resp = jsonify(message)
         resp.status_code = 500
         return resp
